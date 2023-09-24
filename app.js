@@ -30,6 +30,10 @@ mclient.connect(DBURL)
 const userApp=require("./API's/user-api");
 const diaryApp=require("./API's/diary-api");
 
+app.get("/",(req,res)=>{
+    res.send("Hello");
+})
+
 app.use('/users',userApp);
 app.use('/diary',diaryApp);
 
