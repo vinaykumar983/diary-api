@@ -7,7 +7,13 @@ let jwt=require("jsonwebtoken");
 
 require("dotenv").config();
 
-let key=process.env.KEY
+let key=process.env.KEY;
+
+userApp.get("/get-user",expressAsyncHandler(async(request,response)=>{
+    let userCollectionObj=request.app.get("userCollectionObj");
+    let users=await userCollectionObj.find().toArray();
+    response.send({message:"All users",payload:users})
+}))
 
 userApp.post("/login",expressAsyncHandler(async(request,response)=>{
     let user=request.body;

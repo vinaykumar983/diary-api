@@ -3,7 +3,6 @@ let app=exp();
 app.use(exp.json());
 const cors=require("cors");
 
-
 app.use(cors(
     {
         origin:'*'
