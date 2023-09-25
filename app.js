@@ -27,8 +27,8 @@ mclient.connect(DBURL)
     console.log("Error in DB connection");
 })
 
-const userApp=require("./API's/user-api");
-const diaryApp=require("./API's/diary-api");
+const {userApp}=require("./API's/user-api");
+const {diaryApp}=require("./API's/diary-api");
 
 app.get("/",(req,res)=>{
     res.send("Hello");

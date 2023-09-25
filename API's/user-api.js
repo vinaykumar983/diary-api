@@ -50,4 +50,4 @@ userApp.post("/create-user",expressAsyncHandler(async(request,response)=>{
 }))
 
 
-module.exports=userApp;
+module.exports={userApp};

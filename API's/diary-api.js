@@ -25,4 +25,4 @@ diaryApp.delete("/del-data/:username/:date",expressAsyncHandler(async(request,re
     response.send({message:"Data deleted successfully"});
 }));
 
-module.exports=diaryApp;
+module.exports={diaryApp};
