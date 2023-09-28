@@ -2,6 +2,9 @@
 
 GET http://localhost:4000/users/get-user
 
+###
+
+GET http://localhost:4000
 
 ###
 POST http://localhost:4000/users/create-user
@@ -14,7 +17,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:4000/users/login
+POST http://localhost:5000/users/login
 Content-Type: application/json
 
 {
@@ -24,7 +27,7 @@ Content-Type: application/json
 
 
 ###
-POST http://localhost:4000/diary/create-data
+POST http://localhost:5000/diary/create-data
 Content-Type: application/json
 
 {
@@ -40,3 +43,8 @@ GET http://localhost:4000/diary/get-data
 ###
 
 DELETE http://localhost:4000/diary/del-data/Vinay7/date
+
+
+###
+
+GET http://localhost:5000/diary/get-person/Vinay7

@@ -10,6 +10,14 @@ diaryApp.post("/create-data",expressAsyncHandler(async(request,response)=>{
     response.send({message:"Data saved successfully"});
 }))
 
+
+diaryApp.get("/get-person/:username",expressAsyncHandler(async(request,response)=>{
+    let name=request.params.username;
+    let diaryCollectionObj=request.app.get("diaryCollectionObj")
+    let data=await diaryCollectionObj.find({username:name}).toArray();
+    response.send({message:"User data",payload:data})
+}))
+
 diaryApp.get("/get-data",expressAsyncHandler(async(request,response)=>{
     let diaryCollectionObj=request.app.get("diaryCollectionObj");
     let allData=await  diaryCollectionObj.find().toArray();

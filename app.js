@@ -31,6 +31,7 @@ const {userApp}=require("./API's/user-api");
 const {diaryApp}=require("./API's/diary-api");
 
 app.get("/",(req,res)=>{
+    
     res.send("Hello");
 })
 

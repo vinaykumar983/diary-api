@@ -15,6 +15,8 @@ userApp.get("/get-user",expressAsyncHandler(async(request,response)=>{
     response.send({message:"All users",payload:users})
 }))
 
+
+
 userApp.post("/login",expressAsyncHandler(async(request,response)=>{
     let user=request.body;
     let userCollectionObj=request.app.get("userCollectionObj");
@@ -29,6 +31,7 @@ userApp.post("/login",expressAsyncHandler(async(request,response)=>{
         }
         else{
             let token=jwt.sign({username:userObj.username},key,{expiresIn:7200});
+            console.log(userObj)
             response.send({message:"success",payload:token,user:userObj});
         }
     } 
